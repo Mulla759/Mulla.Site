@@ -1,0 +1,268 @@
+/* =================================================================
+   EDITORIAL — PERSONAL MAGAZINE
+   colors_and_type.css — Foundational + semantic design tokens
+   =================================================================
+   A print-magazine type & color system translated to the web.
+   Fonts provided: Basteleur (display), PicNic (annotation).
+   Substituted (flagged): Neue Haas Grotesk -> system Helvetica Neue
+   stack; Pacaembu -> "Space Mono" (Google). Swap when files arrive.
+   ================================================================= */
+
+/* ---------- Webfonts (provided) ---------- */
+@font-face {
+  font-family: 'Basteleur';
+  src: url('fonts/Basteleur-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Basteleur';
+  src: url('fonts/Basteleur-Moonlight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PicNic';
+  src: url('fonts/PicNic.woff2') format('woff2'),
+       url('fonts/PicNic.woff') format('woff'),
+       url('fonts/PicNic-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Space Mono substitutes for Pacaembu — import in HTML <head>:
+   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+*/
+
+:root {
+  /* =====================================================
+     TYPE FAMILIES
+     ===================================================== */
+  --font-display: 'Basteleur', 'Times New Roman', serif;          /* chapter titles, pull quotes */
+  --font-annotation: 'PicNic', 'Comic Sans MS', cursive;          /* playful interruptions, margin notes */
+  --font-body: 'Neue Haas Grotesk Text', 'Helvetica Neue',
+               'Helvetica', 'Arial', sans-serif;                  /* SUBSTITUTE: system Helvetica stack */
+  --font-micro: 'Space Mono', 'Pacaembu', ui-monospace,
+               'SFMono-Regular', monospace;                       /* SUBSTITUTE: Space Mono */
+
+  /* =====================================================
+     COLOR — PAPER (backgrounds)
+     Warm, print-stock neutrals. Never pure white.
+     ===================================================== */
+  --paper-bright: #FBFAF6;  /* bright sheet — feature openers (a pole) */
+  --paper:        #F1ECE0;  /* primary page — warm cream stock */
+  --paper-blush:  #EEDCD4;  /* tinted stock — warm blush section */
+  --paper-stone:  #DADFD9;  /* tinted stock — cool stone section */
+  --paper-news:   #E7E0D0;  /* deeper newsprint — quiet breaks */
+  --paper-ink:    #141210;  /* inked page — cover / contact (a pole) */
+
+  /* =====================================================
+     COLOR — INK (foreground / text)
+     Warm near-blacks through to faint hairline grays.
+     ===================================================== */
+  --ink:    #1B1813;  /* headline ink — warm near-black */
+  --ink-2:  #38342C;  /* body copy */
+  --ink-3:  #6B655A;  /* metadata, secondary */
+  --ink-4:  #9C9587;  /* captions, faint */
+  --ink-5:  #C9C2B2;  /* hairline rules on paper */
+
+  /* On dark (inked) pages */
+  --paper-on-ink:   #EDE7D8;  /* text on --paper-ink */
+  --paper-on-ink-2: #A39C8C;  /* secondary text on dark */
+
+  /* =====================================================
+     COLOR — ACCENT
+     One editorial vermilion + one archival ink-blue.
+     Used sparingly: issue marks, links, annotations.
+     ===================================================== */
+  --vermilion:   #C2412A;  /* cover red — editorial accent */
+  --vermilion-2: #A6321F;  /* pressed / deeper */
+  --ink-blue:    #2C3E54;  /* archival blue — secondary accent */
+  --highlight:      #805A00;  /* marker amber-gold — ALWAYS used translucent */
+  --highlight-wash: rgba(128, 90, 0, 0.30); /* see-through highlight, fades in */
+
+  /* EARTH — magazine-cover surfaces for mastheads & feature/review pages.
+     Pairs with vermilion + ink-blue. Use as backgrounds or deep accents. */
+  --earth-espresso: #1A0F0A;  /* near-black warm brown — masthead ground */
+  --earth-cacao:    #4A2C17;  /* dark chocolate */
+  --earth-sienna:   #8B4513;  /* saddle / sienna — warm feature accent */
+  --earth-pine:     #2D5A3D;  /* deep forest green */
+  --earth-sage:     #6B8E6B;  /* muted sage */
+
+  /* =====================================================
+     HAIRLINES & RULES
+     ===================================================== */
+  --rule:        rgba(27, 24, 19, 0.16);  /* standard hairline on paper */
+  --rule-strong: rgba(27, 24, 19, 0.34);
+  --rule-on-ink: rgba(237, 231, 216, 0.20);
+
+  /* =====================================================
+     SPACING — editorial column rhythm (8px base)
+     ===================================================== */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 40px;
+  --space-6: 64px;
+  --space-7: 104px;
+  --space-8: 168px;   /* chapter gutters */
+
+  /* =====================================================
+     LAYOUT
+     ===================================================== */
+  --measure: 64ch;            /* optimal reading width */
+  --page-margin: clamp(20px, 6vw, 120px);
+  --radius: 0px;              /* print has no rounded corners */
+  --radius-img: 2px;          /* the faintest softening on plates */
+
+  /* =====================================================
+     MOTION — restrained, cinematic
+     ===================================================== */
+  --ease-cinematic: cubic-bezier(0.22, 0.61, 0.36, 1);  /* slow-out reveal */
+  --ease-soft:      cubic-bezier(0.4, 0.0, 0.2, 1);
+  --dur-reveal: 900ms;
+  --dur-hover:  320ms;
+}
+
+/* =====================================================
+   SEMANTIC TYPE ROLES
+   Apply these classes directly, or copy the rules.
+   ===================================================== */
+
+/* Chapter / cover display — Basteleur */
+.t-chapter {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(4rem, 11vw, 10rem);
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+}
+.t-chapter--light {
+  font-weight: 300;        /* Basteleur Moonlight */
+  letter-spacing: -0.02em;
+}
+
+/* Feature headline */
+.t-headline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+}
+
+/* Sub-headline / deck */
+.t-deck {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(1.5rem, 3vw, 2.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink-2);
+}
+
+/* Pull quote — set large, hung in the column */
+.t-pullquote {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+/* Body — Neue Haas / Helvetica */
+.t-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(1.0625rem, 1.1vw, 1.1875rem);
+  line-height: 1.62;
+  letter-spacing: -0.006em;
+  color: var(--ink-2);
+  max-width: var(--measure);
+}
+.t-body--lead::first-letter {
+  /* drop cap for feature openers */
+  font-family: var(--font-display);
+  font-weight: 700;
+  float: left;
+  font-size: 4.6em;
+  line-height: 0.74;
+  padding: 0.06em 0.08em 0 0;
+  color: var(--ink);
+}
+
+/* Standfirst / intro paragraph */
+.t-standfirst {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(1.25rem, 1.7vw, 1.5rem);
+  line-height: 1.45;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+}
+
+/* Micrographics — Space Mono / Pacaembu. The signature of the system:
+   issue numbers, coordinates, timestamps, captions, editorial notes. */
+.t-micro {
+  font-family: var(--font-micro);
+  font-weight: 400;
+  font-size: 0.6875rem;
+  line-height: 1.25;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.t-micro--loud {
+  color: var(--ink);
+  letter-spacing: 0.18em;
+}
+
+/* Caption — slightly larger micro, sentence case allowed */
+.t-caption {
+  font-family: var(--font-micro);
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  color: var(--ink-3);
+}
+
+/* Annotation / margin note — PicNic */
+.t-annotation {
+  font-family: var(--font-annotation);
+  font-weight: 400;
+  font-size: clamp(1rem, 1.8vw, 1.6rem);
+  line-height: 1.2;
+  color: var(--vermilion);
+}
+
+/* Section eyebrow / kicker */
+.t-kicker {
+  font-family: var(--font-micro);
+  font-weight: 700;
+  font-size: 0.6875rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--vermilion);
+}
+
+/* Links — editorial underline */
+.t-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: var(--ink-4);
+  transition: text-decoration-color var(--dur-hover) var(--ease-soft);
+}
+.t-link:hover {
+  text-decoration-color: var(--vermilion);
+}

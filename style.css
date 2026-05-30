@@ -1,0 +1,100 @@
+
+/* ==========================================
+   EDITORIAL PERSONAL SITE — TYPE SYSTEM
+   ========================================== */
+
+:root {
+  --font-display: 'Basteleur', 'Picnic', serif;
+  --font-body: 'Neue Haas Grotesk Text', 'Helvetica Neue', Arial, sans-serif;
+  --font-micro: 'Pacaembu', 'Neue Haas Grotesk Text', monospace;
+  --font-alt: 'Beth Ellen', cursive;
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Editorial headings */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+h1 {
+  font-size: clamp(4rem, 11vw, 10rem);
+  line-height: 0.9;
+}
+
+h2 {
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  line-height: 0.95;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  line-height: 1;
+}
+
+/* Body copy */
+p {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+}
+
+/* Small editorial metadata */
+.micro,
+.caption,
+.issue,
+.timestamp,
+.metadata {
+  font-family: var(--font-micro);
+  font-size: 0.7rem;
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Handwritten / personal accent */
+.note,
+.margin-note,
+.personal-aside {
+  font-family: var(--font-alt);
+  font-size: clamp(1rem, 1.8vw, 1.6rem);
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+/* Pull quote */
+.pull-quote {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+/* Links */
+a {
+  font-family: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
