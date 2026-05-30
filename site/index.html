@@ -1,41 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mulla — My Personal Archive · First Edition</title>
-<link rel="stylesheet" href="colors_and_type.css">
-<link rel="stylesheet" href="site.css">
-<style>
-  /* fonts live alongside this file, in ./fonts/ */
-  @font-face { font-family: 'Basteleur'; src: url('fonts/Basteleur-Bold.otf') format('opentype'); font-weight: 700; font-display: swap; }
-  @font-face { font-family: 'Basteleur'; src: url('fonts/Basteleur-Moonlight.otf') format('opentype'); font-weight: 300; font-display: swap; }
-  @font-face { font-family: 'PicNic'; src: url('fonts/PicNic.woff2') format('woff2'), url('fonts/PicNic.woff') format('woff'); font-weight: 400; font-display: swap; }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mulla — My Personal Archive</title>
+
+  <!-- Fonts: Space Mono (Pacaembu substitute) + Noto Sans Shavian -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+Shavian&display=swap">
+
+  <!-- Design tokens, then global styles -->
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/app.css">
 </head>
 <body>
-<template id="__bundler_thumbnail">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-    <rect width="100" height="100" fill="#141210"/>
-    <text x="50" y="44" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#EDE7D8" text-anchor="middle">M</text>
-    <text x="50" y="64" font-family="monospace" font-size="6" letter-spacing="1.5" fill="#E0795F" text-anchor="middle">ARCHIVE</text>
-  </svg>
-</template>
-<div id="root"></div>
+  <div id="root"></div>
 
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="image-slot.js"></script>
+  <!-- React + Babel (dev transformer). For production, precompile the JSX. -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 
-<script type="text/babel" src="Shared.jsx"></script>
-<script type="text/babel" src="Chrome.jsx"></script>
-<script type="text/babel" src="ChapterCover.jsx"></script>
-<script type="text/babel" src="ChapterWork.jsx"></script>
-<script type="text/babel" src="ChapterArchive.jsx"></script>
-<script type="text/babel" src="ChapterNotes.jsx"></script>
-<script type="text/babel" src="ChapterBio.jsx"></script>
-<script type="text/babel" src="ChapterContact.jsx"></script>
-<script type="text/babel" src="App.jsx"></script>
+  <!-- Optional: user-fillable image placeholders -->
+  <script src="scripts/image-slot.js"></script>
+
+  <!-- App. Order matters: Shared first (exports primitives to window), App last. -->
+  <script type="text/babel" src="scripts/Shared.jsx"></script>
+  <script type="text/babel" src="scripts/Header.jsx"></script>
+  <script type="text/babel" src="scripts/Cover.jsx"></script>
+  <script type="text/babel" src="scripts/Work.jsx"></script>
+  <script type="text/babel" src="scripts/Archive.jsx"></script>
+  <script type="text/babel" src="scripts/Notes.jsx"></script>
+  <script type="text/babel" src="scripts/Bio.jsx"></script>
+  <script type="text/babel" src="scripts/Contact.jsx"></script>
+  <script type="text/babel" src="scripts/App.jsx"></script>
 </body>
 </html>

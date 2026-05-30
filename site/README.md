@@ -1,43 +1,59 @@
-# Mulla — My Personal Archive
+# Mulla — `/site`
 
-A personal website that reads like an independent editorial magazine. Six chapters:
-Cover → Work → Archive → Notes → Biography → Contact.
+The personal editorial-magazine website, as a **self-contained static front-end**. Drop this
+folder into your monorepo (e.g. `apps/site` or just `/site`) and wire a backend to the data points
+noted below.
 
-## Run it locally
-This site loads its components as separate files, so it needs to be **served over http**
-(opening `index.html` directly with `file://` won't load the chapters). Pick one:
-
-```bash
-# Python 3 (already on most machines)
-python3 -m http.server 8080
-# then open http://localhost:8080
-
-# or Node
-npx serve .
+```
+site/
+├── index.html          # entry — loads tokens, styles, React, and the chapter scripts (in order)
+├── styles/
+│   ├── tokens.css      # design system: fonts (@font-face → ../fonts), color, spacing, motion, type roles
+│   └── app.css         # resets, keyframes, helpers (.grain-field, .stars-pop, reels)
+├── scripts/            # React (JSX, transpiled in-browser by Babel for now)
+│   ├── Shared.jsx      # primitive library → window (Micro, Kicker, Shavian, DayNight, Pictograph,
+│   │                   #   VinylSpinner, Equalizer, Stars, ArrowLink, Button, Plate, Reveal)
+│   ├── Header.jsx      # sticky chapter nav (smooth-scroll + active tracking)
+│   ├── Cover.jsx       # cover masthead (day/night micrograph on Central Time, Shavian mark)
+│   ├── Work.jsx        # ChapterOpener (shared) + FeatureStory + Work
+│   ├── Archive.jsx     # review reel → review modal, photo grid, live rail (now-playing + scrobbles + Letterboxd)
+│   ├── Closing.jsx     # Notes (compact fragments) + Bio + Contact (peach + stop-motion strip)
+│   ├── App.jsx         # composes chapters + mounts to #root
+│   └── image-slot.js   # <image-slot> web component (drop-in photography)
+└── fonts/              # Basteleur (Bold/Moonlight), PicNic (woff2/woff/otf)
 ```
 
-Want a true double-click-to-open file with no server? Use **`Mulla-Archive-offline.html`**
-(in the repo root) — everything (fonts, photo, components) is inlined into one file.
+## Run it
+It's static — open `index.html` directly, or serve the folder:
 
-## Deploy on GitHub Pages
-1. Commit this folder to your repo (see below).
-2. Repo → **Settings → Pages** → Source: *Deploy from a branch* → pick your branch + `/root`
-   (or move these files to `/docs` and choose that).
-3. Your site goes live at `https://<user>.github.io/<repo>/`.
+```bash
+npx serve site        # or: python3 -m http.server -d site
+```
 
-## Files
-- `index.html` — entry point.
-- `colors_and_type.css` — design tokens (colors, type, spacing, motion).
-- `site.css` — resets, keyframes, scrollbars.
-- `Shared.jsx`, `Chrome.jsx`, `Chapter*.jsx`, `App.jsx` — React components (in-browser Babel).
-- `image-slot.js` — drag-and-drop image placeholder.
-- `fonts/` — Basteleur + PicNic. (Body uses the system Helvetica stack as a stand-in for Neue
-  Haas Grotesk; micro uses Space Mono via Google Fonts as a stand-in for Pacaembu — swap when
-  you have those files.)
-- `portrait-cover.png` — cover photo.
+No build step is required: JSX is transpiled in the browser by Babel standalone.
+
+## Wire the backend (the data hooks)
+Everything below is **static boilerplate today** — these are the integration points:
+
+| Where | File | Replace with |
+|---|---|---|
+| Recently rated / reviews | `scripts/Archive.jsx` → `ARCHIVE_ITEMS` | Letterboxd RSS / API (title, poster, rating, review, link) |
+| Now playing + scrobbles | `scripts/Archive.jsx` → `LiveRail`, `ScrobbleFeed` | Last.fm `user.getRecentTracks` |
+| Letterboxd stats card | `scripts/Archive.jsx` → `LiveRail` | Letterboxd profile counts |
+| Day / night micrograph | `scripts/Shared.jsx` → `DayNight` | optional: open-source weather (sun/moon + conditions) |
+| Notes / essays | `scripts/Closing.jsx` → `Notes` | your CMS / markdown |
+| Work features | `scripts/Work.jsx` | your project data |
+
+The components take plain props/arrays, so swapping static data for `fetch()` results is direct.
 
 ## Production note
-This is a **design build** using in-browser Babel — great for previewing and GitHub Pages, but
-for a real production app, port these components into a framework (Astro / Next.js) and precompile.
-The data sources to wire: **Last.fm** (now playing + scrobbles), **Letterboxd** (archive), and an
-open-source **weather/astronomy** feed (the day/night mark). See the handoff README for full specs.
+For production, **precompile the JSX** (Vite/esbuild) instead of shipping Babel standalone, and
+self-host the two Google fonts. The two substituted fonts (Neue Haas Grotesk → Helvetica stack,
+Pacaembu → Space Mono) are defined in `styles/tokens.css` — swap them there when you have the
+licensed web files.
+
+## Notes
+- All imagery is art-directed `Plate` placeholders. Use real photos by passing `slotId` to `<Plate>`
+  (renders an `<image-slot>`) or replacing the plate with an `<img>`.
+- `errata_`, the dithered pixel companion, is intentionally not here yet — returns once the earth
+  palette is locked.

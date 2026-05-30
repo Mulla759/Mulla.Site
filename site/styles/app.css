@@ -1,0 +1,40 @@
+/* app.css — global resets, motion primitives, and helpers.
+   Design tokens (colors, type, spacing) live in tokens.css. */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+section { scroll-margin-top: 62px; }
+button { font-family: inherit; cursor: pointer; }
+::selection { background: var(--highlight-wash); }
+
+/* grain overlay used by film plates */
+.grain-field {
+  position: absolute; inset: 0; opacity: 0.45; mix-blend-mode: multiply; pointer-events: none;
+  background-image: radial-gradient(rgba(20,18,15,0.22) 0.5px, transparent 0.6px);
+  background-size: 3px 3px;
+}
+
+/* motion primitives */
+@keyframes spin   { to { transform: rotate(360deg); } }
+@keyframes bounce { 0%,100% { transform: scaleY(0.35); } 50% { transform: scaleY(1); } }
+@keyframes rise   { from { transform: translateY(0); } to { transform: translateY(-50%); } }
+@keyframes driftX { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes nudge  { 0%,100% { transform: translateY(0); opacity: .45; } 50% { transform: translateY(4px); opacity: 1; } }
+@keyframes pulse  { 0%,100% { opacity: 1; } 50% { opacity: 0.2; } }
+@keyframes stopmo { to { transform: translateX(-50%); } }
+
+.stars-pop:hover span { transform: translateY(-2px) scale(1.18) !important; }
+
+/* internal horizontal reels */
+.reel::-webkit-scrollbar { height: 4px; }
+.reel::-webkit-scrollbar-thumb { background: var(--rule-strong); }
+.reel::-webkit-scrollbar-track { background: var(--rule); }
+
+image-slot { width: 100%; height: 100%; display: block; }
