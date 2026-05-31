@@ -15,7 +15,7 @@ function Cover() {
       <div style={{ position: "absolute", top: 26, right: "clamp(20px, 5vw, 56px)", textAlign: "right" }}>
         <Shavian size={20} />
         <div style={{ marginTop: 5 }}><Micro size={8} color="var(--ink-4)">
-          <span style={{ color: "var(--vermilion)" }}>✶</span> set in shavian</Micro></div>
+          <span style={{ color: "var(--vermilion)" }}>✶</span> made with love</Micro></div>
       </div>
 
       {/* core */}

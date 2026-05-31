@@ -1,15 +1,15 @@
 /* Notes.jsx — compact fragments: essays, quotes, screenshots, references. */
 
-function Notes() {
+function Notes({ onReadMore }) {
   const frags = [
-    { tag: "Essay · 28 May", kind: "title", title: "On keeping a commonplace book", body: "The internet made everyone an archivist and no one a curator. A note is only worth keeping if you’d defend it." },
-    { tag: "Fragment", kind: "quote", body: "“Taste is just attention paid out over years.” — overheard, then stolen." },
-    { tag: "Screenshot · 24 May", kind: "plate", tone: "cool", body: "A frame from La Chimera I can’t stop thinking about." },
+    { tag: "Essay · 28 May", kind: "title", title: "On keeping a commonplace book", body: "The internet made everyone an archivist and no one a curator. A note is only worth keeping if you'd defend it." },
+    { tag: "Fragment", kind: "quote", body: "\u201cTaste is just attention paid out over years.\u201d — overheard, then stolen." },
+    { tag: "Screenshot · 24 May", kind: "plate", tone: "cool", body: "A frame from La Chimera I can't stop thinking about." },
     { tag: "Reference", kind: "title", title: "Apartamento, every issue", body: "Proof that interiors are really portraits. The mess is the point." },
     { tag: "Note", kind: "plain", body: "Started transliterating my margin notes into Shavian. Nobody can read them now, including me." },
     { tag: "Photograph · 19 May", kind: "plate", tone: "rose", body: "Light through the blinds, 7:40am." },
     { tag: "Fragment", kind: "plain", body: "Films watched alone hit differently than films watched beside someone. Logging both, separately." },
-    { tag: "Essay · 11 May", kind: "title", title: "Against the highlight reel", body: "A life is mostly errata. I’d rather show the corrections than the cover." },
+    { tag: "Essay · 11 May", kind: "title", title: "Against the highlight reel", body: "A life is mostly errata. I'd rather show the corrections than the cover." },
   ];
   return (
     <section id="notes" style={{ background: "var(--paper-bright)", padding: "78px clamp(20px, 6vw, 80px)" }}>
@@ -24,6 +24,11 @@ function Notes() {
             {f.kind === "quote"
               ? <div style={{ fontFamily: "var(--font-display)", fontWeight: 300, fontSize: 20, letterSpacing: "-0.02em", lineHeight: 1.15, color: "var(--ink)" }}>{f.body}</div>
               : <p style={{ fontFamily: "var(--font-body)", fontSize: 13.5, lineHeight: 1.55, color: "var(--ink-2)" }}>{f.body}</p>}
+            {f.kind === "title" && onReadMore && (
+              <div style={{ marginTop: 10 }}>
+                <ArrowLink onClick={() => onReadMore(i)}>Read more</ArrowLink>
+              </div>
+            )}
           </div>
         ))}
       </div>

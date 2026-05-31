@@ -84,6 +84,16 @@
   --highlight:      #805A00;  /* marker amber-gold — ALWAYS used translucent */
   --highlight-wash: rgba(128, 90, 0, 0.30); /* see-through highlight, fades in */
 
+  --orange:       #D4710A;
+  --orange-2:     #B85E06;
+  --orange-wash:  rgba(212, 113, 10, 0.12);
+  --orange-rule:  rgba(212, 113, 10, 0.25);
+
+  --gallery:      #2C3E54;  /* ink-blue — gallery accent */
+  --gallery-2:    #1E2D3F;  /* pressed / deeper */
+  --gallery-wash: rgba(44, 62, 84, 0.12);
+  --gallery-rule: rgba(44, 62, 84, 0.25);
+
   /* EARTH — magazine-cover surfaces for mastheads & feature/review pages.
      Pairs with vermilion + ink-blue. Use as backgrounds or deep accents. */
   --earth-espresso: #1A0F0A;  /* near-black warm brown — masthead ground */

@@ -4,19 +4,19 @@
 const ARCHIVE_ITEMS = [
   { id: "jd", medium: "film", mlabel: "Film", title: "Jeanne Dielman", by: "Chantal Akerman", year: "1975",
     tone: "sienna", rating: 5, date: "22 May", reviewTitle: "Jeanne Dielman",
-    review: "Three days, one kitchen, and the most radical thing I’ve ever watched happen to ordinary time. It rewires what you think cinema is allowed to be patient about.", lb: "letterboxd.com/mulla" },
+    review: "Three days, one kitchen, and the most radical thing I've ever watched happen to ordinary time. It rewires what you think cinema is allowed to be patient about.", lb: "letterboxd.com/Mulla759" },
   { id: "we", medium: "book", mlabel: "Book", title: "Weather", by: "Jenny Offill", year: "2021",
     tone: "pine", rating: 4, date: "this week", reviewTitle: "Weather",
-    review: "Fragments that accrue into dread and tenderness. I keep a note of half its sentences; they read like things I almost thought first.", lb: "letterboxd.com/mulla" },
+    review: "Fragments that accrue into dread and tenderness. I keep a note of half its sentences; they read like things I almost thought first.", lb: "letterboxd.com/Mulla759" },
   { id: "lc", medium: "film", mlabel: "Film", title: "La Chimera", by: "Alice Rohrwacher", year: "2024",
     tone: "rose", rating: 4.5, date: "09 May", reviewTitle: "La Chimera",
-    review: "Grave-robbers and ghosts shot like a faded postcard. Rohrwacher finds the sacred in the second-hand. Stayed with me for days.", lb: "letterboxd.com/mulla" },
+    review: "Grave-robbers and ghosts shot like a faded postcard. Rohrwacher finds the sacred in the second-hand. Stayed with me for days.", lb: "letterboxd.com/Mulla759" },
   { id: "ts", medium: "music", mlabel: "Music", title: "Two Star", by: "Mk.gee", year: "2024",
     tone: "ink", rating: "repeat", date: "today", reviewTitle: "Two Star & the Dream Police",
-    review: "Sounds like a memory of a song you can’t place. On repeat for a month now — the production is a whole argument about restraint.", lb: "last.fm/mulla" },
+    review: "Sounds like a memory of a song you can't place. On repeat for a month now — the production is a whole argument about restraint.", lb: "last.fm/user/Mulla759" },
   { id: "ou", medium: "book", mlabel: "Book", title: "Outline", by: "Rachel Cusk", year: "2014",
     tone: "cool", rating: 5, date: "02 May", reviewTitle: "Outline",
-    review: "A novel that listens. Cusk dissolves the narrator until the book becomes a room other people talk in. Quietly devastating.", lb: "letterboxd.com/mulla" },
+    review: "A novel that listens. Cusk dissolves the narrator until the book becomes a room other people talk in. Quietly devastating.", lb: "letterboxd.com/Mulla759" },
 ];
 
 function ReviewIsland({ item, onOpen }) {
@@ -35,7 +35,7 @@ function ReviewIsland({ item, onOpen }) {
         <span style={{ position: "relative", zIndex: 1, color: "rgba(255,255,255,0.92)" }}>
           <Pictograph kind={item.medium === "music" ? "vinyl" : item.medium} size={40} color="rgba(255,255,255,0.92)" /></span>
         <span style={{ position: "absolute", bottom: 9, left: 9, fontFamily: "var(--font-micro)", fontSize: 7,
-          letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.72)" }}>{item.mlabel} · ’{item.year.slice(2)}</span>
+          letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.72)" }}>{item.mlabel} · '{item.year.slice(2)}</span>
       </div>
       <div style={{ marginTop: 9 }}>
         <div style={{ fontFamily: "var(--font-display)", fontWeight: 300, fontSize: 18, letterSpacing: "-0.02em", lineHeight: 0.98, color: "var(--ink)" }}>{item.title}</div>
@@ -53,6 +53,7 @@ function ReviewIsland({ item, onOpen }) {
 function ReviewModal({ item, onClose }) {
   const tones = { sienna: "sienna", pine: "pine", rose: "rose", ink: "ink", cool: "cool" };
   if (!item) return null;
+  const showReadMore = item.medium !== "music";
   return (
     <div onClick={onClose} style={{ position: "fixed", inset: 0, zIndex: 100, background: "rgba(20,18,15,0.62)",
       display: "flex", alignItems: "center", justifyContent: "center", padding: 24, backdropFilter: "blur(2px)" }}>
@@ -71,10 +72,12 @@ function ReviewModal({ item, onClose }) {
               : <Stars value={item.rating} />}
           </div>
           <p style={{ fontFamily: "var(--font-body)", fontSize: 15, lineHeight: 1.55, color: "var(--ink-2)", marginBottom: 24 }}>{item.review}</p>
-          <div style={{ marginTop: "auto", borderTop: "1px solid var(--rule)", paddingTop: 14 }}>
-            <a href={"https://" + item.lb} target="_blank" rel="noreferrer" style={{ textDecoration: "none" }}>
-              <ArrowLink dir="↗">Read more on {item.lb.includes("last") ? "Last.fm" : "Letterboxd"}</ArrowLink></a>
-          </div>
+          {showReadMore && (
+            <div style={{ marginTop: "auto", borderTop: "1px solid var(--rule)", paddingTop: 14 }}>
+              <a href={"https://" + item.lb} target="_blank" rel="noreferrer" style={{ textDecoration: "none" }}>
+                <ArrowLink dir="↗">Read more on Letterboxd</ArrowLink></a>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -136,12 +139,12 @@ function LiveRail() {
         <ScrobbleFeed />
       </div>
       {/* letterboxd reference card */}
-      <a href="https://letterboxd.com/mulla" target="_blank" rel="noreferrer"
+      <a href="https://letterboxd.com/Mulla759/" target="_blank" rel="noreferrer"
         style={{ textDecoration: "none", display: "block", border: "1px solid var(--rule-strong)", padding: 18, background: "var(--paper-bright)" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <div>
             <Micro size={9} color="var(--vermilion)">Letterboxd</Micro>
-            <div style={{ fontFamily: "var(--font-display)", fontWeight: 300, fontSize: 22, letterSpacing: "-0.02em", color: "var(--ink)", marginTop: 4 }}>@mulla</div>
+            <div style={{ fontFamily: "var(--font-display)", fontWeight: 300, fontSize: 22, letterSpacing: "-0.02em", color: "var(--ink)", marginTop: 4 }}>@Mulla759</div>
           </div>
           <span style={{ fontFamily: "var(--font-micro)", fontSize: 18, color: "var(--vermilion)" }}>↗</span>
         </div>
@@ -174,11 +177,11 @@ function PhotoGrid() {
   );
 }
 
-function Archive() {
+function Archive({ onGallery }) {
   const [sel, setSel] = React.useState(null);
   return (
     <section id="archive" style={{ background: "var(--paper-news)", padding: SECTION_PAD }}>
-      <ChapterOpener num="03" title="Archive" standfirst="Everything I’ve been watching, reading, hearing and photographing — an evolving log of the non-suffering stuff." />
+      <ChapterOpener num="03" title="Archive" standfirst="Everything I've been watching, reading, hearing and photographing — an evolving log of the non-suffering stuff." />
       <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.55fr) minmax(280px, 1fr)", gap: "clamp(32px, 5vw, 72px)", alignItems: "start" }}>
         {/* main */}
         <div>
@@ -191,6 +194,29 @@ function Archive() {
           </div>
           <div style={{ marginBottom: 18 }}><Micro size={10} color="var(--ink-3)">Photographs — 35mm, grain kept</Micro></div>
           <PhotoGrid />
+          {/* Video section */}
+          {onGallery && (
+            <Reveal style={{ marginTop: 56 }}>
+              <div style={{ borderTop: "1px solid var(--rule-strong)", paddingTop: 22 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 18 }}>
+                  <Micro size={10} color="var(--ink-3)">Video — stills from the reel</Micro>
+                  <ArrowLink onClick={onGallery}>Open gallery</ArrowLink>
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
+                  {[
+                    { tone: "ink", frame: "V01", cap: "Minneapolis, dusk" },
+                    { tone: "sienna", frame: "V02", cap: "Studio session" },
+                    { tone: "cool", frame: "V03", cap: "Lake walk, February" },
+                  ].map((v, i) => (
+                    <div key={i} style={{ cursor: "pointer" }} onClick={onGallery}>
+                      <Plate ratio="16/9" tone={v.tone} frame={v.frame} video dur={["1:22", "0:48", "2:15"][i]} />
+                      <div style={{ marginTop: 6 }}><Micro size={8} color="var(--ink-3)">{v.cap}</Micro></div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          )}
         </div>
         {/* rail fills the right */}
         <LiveRail />

@@ -24,7 +24,7 @@ function ChapterOpener({ num, title, standfirst, dark, align = "left" }) {
   );
 }
 
-function FeatureStory({ flip, kicker, year, title, standfirst, body, meta, tone, frame }) {
+function FeatureStory({ flip, kicker, year, title, standfirst, body, meta, tone, frame, onReadMore }) {
   return (
     <Reveal style={{ marginBottom: 96 }}>
       <div style={{ display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)", gap: "clamp(28px, 5vw, 72px)", alignItems: "center" }}>
@@ -44,7 +44,7 @@ function FeatureStory({ flip, kicker, year, title, standfirst, body, meta, tone,
           <p style={{ fontFamily: "var(--font-body)", fontSize: "1rem", lineHeight: 1.62, color: "var(--ink-2)",
             maxWidth: "46ch", marginBottom: 26 }}>{body}</p>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", borderTop: "1px solid var(--rule)", paddingTop: 14 }}>
-            <ArrowLink>Read the feature</ArrowLink>
+            <ArrowLink onClick={onReadMore}>Read the feature</ArrowLink>
             <Micro size={9} color="var(--ink-4)">{meta}</Micro>
           </div>
         </div>
@@ -53,7 +53,7 @@ function FeatureStory({ flip, kicker, year, title, standfirst, body, meta, tone,
   );
 }
 
-function Work() {
+function Work({ onReadMore }) {
   return (
     <section id="work" style={{ background: "var(--paper)", padding: SECTION_PAD }}>
       <ChapterOpener num="02" title="Work" standfirst="Projects told as feature stories — the thinking, the references, and the people, not a list of deliverables." />
@@ -62,13 +62,15 @@ function Work() {
         title="Building Promise, in public"
         standfirst="A year spent making a financial companion that treats patience as a feature, not a flaw."
         body="It began as a question about time — how an app could help someone wait well. The work moved between research notes, late-night Figma files, and a lot of reading about how rituals form. What stayed constant was a refusal to ship anxiety."
-        meta="Role — Design & Front-end / MPLS" />
+        meta="Role — Design & Front-end / MPLS"
+        onReadMore={onReadMore} />
       <FeatureStory flip
         kicker="Open Source · Tooling" year="2024" tone="pine" frame="Case 02"
         title="Rolodex, for the rest of us"
-        standfirst="An open recruiter-discovery tool for students who didn’t inherit a network."
-        body="Half product, half polemic. The interface had to feel like a friend who knows people, not a database. We wrote the cold-outreach copy the way you’d actually text someone, and the tool grew from there into something students quietly passed around."
-        meta="Role — Maker / Filed under Access" />
+        standfirst="An open recruiter-discovery tool for students who didn't inherit a network."
+        body="Half product, half polemic. The interface had to feel like a friend who knows people, not a database. We wrote the cold-outreach copy the way you'd actually text someone, and the tool grew from there into something students quietly passed around."
+        meta="Role — Maker / Filed under Access"
+        onReadMore={onReadMore} />
     </section>
   );
 }
