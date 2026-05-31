@@ -33,6 +33,58 @@
   font-display: swap;
 }
 
+/* ---------- Bio voices: Apfel Grotezk + Costura + F. Goritsch ----------
+   Apfel Grotezk = the Biography section's composite voice (display + body).
+   Costura       = the ENGINEERING voice (code, products, systems).
+   F. Goritsch   = the CREATIVE / MEDIA voice (film, writing, image).
+   Drop F. Goritsch into /fonts as one of the candidate names below and it
+   activates automatically; until then it falls back to the display serif. */
+@font-face {
+  font-family: 'Apfel Grotezk';
+  src: url('fonts/ApfelGrotezk-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Apfel Grotezk';
+  src: url('fonts/ApfelGrotezk-Fett.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Costura';
+  src: url('fonts/costura_regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Costura';
+  src: url('fonts/costura_demibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Costura';
+  src: url('fonts/costura_bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'F. Goritsch';
+  src: url('fonts/FGoritsch-Regular.otf') format('opentype'),
+       url('fonts/f.goritsch.otf') format('opentype'),
+       url('fonts/F-Goritsch.otf') format('opentype'),
+       url('fonts/Goritsch-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Space Mono substitutes for Pacaembu — import in HTML <head>:
    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 */
@@ -47,6 +99,12 @@
                'Helvetica', 'Arial', sans-serif;                  /* SUBSTITUTE: system Helvetica stack */
   --font-micro: 'Space Mono', 'Pacaembu', ui-monospace,
                'SFMono-Regular', monospace;                       /* SUBSTITUTE: Space Mono */
+
+  /* Bio composite voices (Chapter 05). Grotezk carries the section;
+     eng / creative are the two cross-pollinating sub-voices. */
+  --font-grotezk:  'Apfel Grotezk', 'Helvetica Neue', 'Arial', sans-serif;  /* bio display + body */
+  --font-eng:      'Costura', 'Neue Haas Grotesk Text', 'Helvetica Neue', sans-serif;  /* engineering */
+  --font-creative: 'F. Goritsch', 'Basteleur', 'Georgia', serif;            /* creative / media */
 
   /* =====================================================
      COLOR — PAPER (backgrounds)

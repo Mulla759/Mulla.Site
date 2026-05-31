@@ -1,7 +1,9 @@
-/* Bio.jsx — narrative profile + the "this is me" portrait (real headshot). */
+/* Bio.jsx — Chapter 05: a short magazine profile.
+   Portrait + "this is me" on the left, a few simple lines on the right.
+   Three voices: Costura for code, Apfel Grotezk for film/writing,
+   Basteleur for the heading, PicNic for the "this is me" tag. */
 
-/* The framed "this is me" portrait — sienna ground, PicNic overlay, blurred coordinate.
-   Swap src for any cut-out (transparent PNG) portrait; the sienna shows through. */
+/* The framed "this is me" portrait — sienna ground, PicNic overlay, blurred coordinate. */
 function ThisIsMe() {
   return (
     <figure style={{ margin: 0 }}>
@@ -24,34 +26,45 @@ function ThisIsMe() {
   );
 }
 
+/* code voice: Costura, archival ink-blue */
+function Eng({ children }) {
+  return <span style={{ fontFamily: "var(--font-eng)", fontWeight: 600, letterSpacing: "-0.005em", color: "var(--ink-blue)" }}>{children}</span>;
+}
+/* film / writing voice: Apfel Grotezk, warm sienna */
+function Cre({ children }) {
+  return <span style={{ fontFamily: "var(--font-grotezk)", fontWeight: 500, fontStyle: "italic", color: "var(--earth-sienna)" }}>{children}</span>;
+}
+
 function Bio() {
   return (
     <section id="bio" style={{ background: "var(--paper)", padding: SECTION_PAD }}>
-      <ChapterOpener num="05" title="Biography" standfirst="Not a résumé — a profile. Where the perspective actually comes from." />
-      <div style={{ display: "grid", gridTemplateColumns: "minmax(0,0.85fr) minmax(0,1.15fr)", gap: "clamp(32px, 6vw, 88px)", alignItems: "start" }}>
+      <ChapterOpener num="05" title="Biography"
+        standfirst={<>
+          My name is <span style={{ fontFamily: "var(--font-grotezk)", fontWeight: 600 }}>Abdullahi</span>, also known as{" "}
+          <span style={{ fontFamily: "var(--font-display)", fontWeight: 700, color: "var(--vermilion)", letterSpacing: "-0.02em" }}>Mulla</span>.
+          <br />
+          I'm a Creative Technologist!
+        </>} />
+
+      <div style={{ display: "grid", gridTemplateColumns: "minmax(0,0.85fr) minmax(0,1.15fr)",
+        gap: "clamp(32px, 6vw, 88px)", alignItems: "start" }}>
         <Reveal><ThisIsMe /></Reveal>
+
         <div>
-          <p style={{ fontFamily: "var(--font-body)", fontWeight: 500, fontSize: "clamp(1.2rem, 1.7vw, 1.5rem)", lineHeight: 1.45, letterSpacing: "-0.012em", color: "var(--ink)", marginBottom: 24 }}>
-            Mulla is a designer and maker in Minneapolis who treats culture as a working method — reading, watching and listening as research, not leisure.</p>
-          <p style={{ fontFamily: "var(--font-body)", fontSize: "1.02rem", lineHeight: 1.65, color: "var(--ink-2)", maxWidth: "58ch", marginBottom: 18 }}>
-            He came up through hackathons and open-source projects, the kind of work where you learn the product by building it twice. <span style={{ background: "var(--highlight-wash)" }}>Somewhere between a recruiter tool for students and a financial app about patience</span>, a throughline appeared: software should be humane, and taste is part of that.</p>
-          <p style={{ fontFamily: "var(--font-body)", fontSize: "1.02rem", lineHeight: 1.65, color: "var(--ink-2)", maxWidth: "58ch", marginBottom: 40 }}>
-            The rest is logged here — the films that taught him pacing, the books that taught him voice, the records that taught him restraint.</p>
+          <p style={{ fontFamily: "var(--font-grotezk)", fontWeight: 500, fontSize: "clamp(1.5rem, 2.4vw, 2.1rem)",
+            lineHeight: 1.3, letterSpacing: "-0.02em", color: "var(--ink)", margin: "0 0 28px", maxWidth: "22ch" }}>
+            I like to <Eng>code</Eng>. I like <Cre>film</Cre>. I like to <Cre>write</Cre>.
+          </p>
 
-          <div style={{ borderLeft: "2px solid var(--vermilion)", paddingLeft: 24, marginBottom: 40 }}>
-            <p style={{ fontFamily: "var(--font-display)", fontWeight: 300, fontSize: "clamp(1.6rem, 3vw, 2.6rem)", lineHeight: 1.05, letterSpacing: "-0.03em", color: "var(--ink)" }}>
-              I’m a polymath, but the perspective comes from culture.</p>
-          </div>
+          <p style={{ fontFamily: "var(--font-grotezk)", fontSize: "clamp(1.05rem, 1.4vw, 1.2rem)",
+            lineHeight: 1.6, color: "var(--ink-2)", margin: "0 0 20px", maxWidth: "48ch" }}>
+            Mostly I like the space where they overlap.
+          </p>
 
-          {/* prose timeline */}
-          <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-            {[["2026", "Building Promise, in public"], ["2024", "Rolodex — open recruiter discovery"], ["2023", "AI Innovation Hackathon — Blackbox"], ["2022", "First lines of public writing"]].map(([y, t], i) => (
-              <div key={i} style={{ display: "grid", gridTemplateColumns: "70px 1fr", gap: 18, alignItems: "baseline", padding: "12px 0", borderTop: "1px solid var(--rule)" }}>
-                <Micro size={11} color="var(--vermilion)">{y}</Micro>
-                <span style={{ fontFamily: "var(--font-body)", fontSize: 15, color: "var(--ink)" }}>{t}</span>
-              </div>
-            ))}
-          </div>
+          <p style={{ fontFamily: "var(--font-grotezk)", fontSize: "clamp(1.05rem, 1.4vw, 1.2rem)",
+            lineHeight: 1.6, color: "var(--ink-2)", margin: 0, maxWidth: "48ch" }}>
+            This page is an archive of the things that interest and intrigue me, kept in the open and free to take, because I love sharing them.
+          </p>
         </div>
       </div>
     </section>

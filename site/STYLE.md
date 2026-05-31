@@ -13,6 +13,27 @@ dashboard, résumé, or card-grid. All tokens live in `styles/tokens.css`.
 | Annotation | **PicNic** `--font-annotation` | Hand-drawn interruptions, review titles, "this is me". Used sparingly, often slightly rotated. |
 | Cipher | **Noto Sans Shavian** | Cryptic micrographic signature — `𐑥𐑱𐑛 𐑢𐑦𐑞 𐑤𐑳𐑝` = "made with love". Mostly untranslated. |
 
+### Bio composite voices (Chapter 05)
+The Biography stays the simple two-column magazine profile (portrait + "this is me" on the
+left, a few short lines on the right), but layers a three-voice type system so the
+disciplines read differently in the prose itself. Lives in `scripts/Bio.jsx`.
+| Role | Family (token) | Use |
+|---|---|---|
+| Heading | **Basteleur** `--font-display` | The "Biography" chapter title, via `ChapterOpener`. Unchanged from the rest of the magazine. |
+| Bio body | **Apfel Grotezk** `--font-grotezk` | The reading copy and the lead line. Carries the section's voice. |
+| Code voice | **Costura** `--font-eng` | Words about building — code, products, systems (`Eng` helper). Paired with archival **ink-blue** `--ink-blue`. |
+| Film / writing voice | **Apfel Grotezk** (italic) `--font-grotezk` | Words about film, writing, image (`Cre` helper). Set italic + warm **sienna** `--earth-sienna` so it reads as a distinct voice against the Costura code words. |
+| "this is me" tag | **PicNic** `--font-annotation` | The hand-drawn label over the portrait. Slightly rotated, sparing. |
+
+**Voice = colour.** The two sub-voices are typeset *and* coloured by meaning (code →
+ink-blue Costura, film/writing → sienna Apfel Grotezk italic) so the contrast is legible
+at a glance. Keep Bio copy **short and not identity-primed** — no labels, no "polymath";
+state what he does and that he loves sharing it. The em dash is retired from Bio copy in
+favour of commas and full stops.
+
+**F. Goritsch** (`--font-creative`) is registered in the tokens but **reserved/unused** for
+now (no font file in `/fonts` yet); earmarked for a future page, not the Bio.
+
 ## Color
 - **Paper (never pure white):** `--paper-bright #FBFAF6`, `--paper #F1ECE0`, tints `--paper-blush
   #EEDCD4` (warm) / `--paper-stone #DADFD9` (cool), `--paper-ink #141210` (inked pole).
