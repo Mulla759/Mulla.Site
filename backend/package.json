@@ -1,0 +1,18 @@
+{
+  "name": "mulla-aggregator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Backend aggregator: turns Mulla's Letterboxd RSS into a static JSON feed for the site, enriched with TMDB posters. Route A (free, self-owned).",
+  "scripts": {
+    "sync": "node src/aggregate.js",
+    "sync:letterboxd": "node src/aggregate.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "fast-xml-parser": "^5.8.0"
+  }
+}

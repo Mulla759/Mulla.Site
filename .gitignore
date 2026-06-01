@@ -1,0 +1,16 @@
+# dependencies
+node_modules/
+**/node_modules/
+
+# env / secrets — never commit these
+.env
+.env.local
+**/.env
+!**/.env.example
+
+# os / editor cruft
+.DS_Store
+**/.DS_Store
+*.log
+npm-debug.log*
+yarn-error.log*

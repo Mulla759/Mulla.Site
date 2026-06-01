@@ -29,53 +29,86 @@ function ReviewIsland({ item, onOpen }) {
       onMouseLeave={e => e.currentTarget.style.transform = "none"}>
       <div style={{ position: "relative", aspectRatio: "3/4", borderRadius: 2, overflow: "hidden",
         background: tones[item.tone], display: "flex", alignItems: "center", justifyContent: "center" }}>
+        {item.poster && (
+          <img src={item.poster} alt={item.title} loading="lazy" decoding="async"
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+        )}
         <span className="grain-field" />
         <span style={{ position: "absolute", top: 9, left: 9, fontFamily: "var(--font-micro)", fontSize: 8,
           letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.92)" }}>{item.date}</span>
-        <span style={{ position: "relative", zIndex: 1, color: "rgba(255,255,255,0.92)" }}>
-          <Pictograph kind={item.medium === "music" ? "vinyl" : item.medium} size={40} color="rgba(255,255,255,0.92)" /></span>
+        {!item.poster && (
+          <span style={{ position: "relative", zIndex: 1, color: "rgba(255,255,255,0.92)" }}>
+            <Pictograph kind={item.medium === "music" ? "vinyl" : item.medium} size={40} color="rgba(255,255,255,0.92)" /></span>
+        )}
         <span style={{ position: "absolute", bottom: 9, left: 9, fontFamily: "var(--font-micro)", fontSize: 7,
-          letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.72)" }}>{item.mlabel} · '{item.year.slice(2)}</span>
+          letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.72)" }}>{item.mlabel}{item.year ? ` · '${item.year.slice(2)}` : ""}</span>
       </div>
       <div style={{ marginTop: 9 }}>
         <div style={{ fontFamily: "var(--font-display)", fontWeight: 300, fontSize: 18, letterSpacing: "-0.02em", lineHeight: 0.98, color: "var(--ink)" }}>{item.title}</div>
-        <div style={{ fontFamily: "var(--font-body)", fontSize: 10, color: "var(--ink-3)", marginTop: 2 }}>{item.by}</div>
+        {item.by && <div style={{ fontFamily: "var(--font-body)", fontSize: 10, color: "var(--ink-3)", marginTop: 2 }}>{item.by}</div>}
         <div style={{ marginTop: 7 }}>
           {item.rating === "repeat"
             ? <span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}><Equalizer h={13} bars={[6,13,9,12]} /><Micro size={8} color="var(--vermilion)">on repeat</Micro></span>
-            : <span className="stars-pop"><Stars value={item.rating} hoverPop /></span>}
+            : item.rating != null
+              ? <span className="stars-pop"><Stars value={item.rating} hoverPop /></span>
+              : <Micro size={8} color="var(--ink-4)">logged</Micro>}
         </div>
       </div>
     </div>
   );
 }
 
+// Trim a long review to a teaser so readers finish it on Letterboxd.
+const REVIEW_LIMIT = 260;
+function clampReview(text, limit = REVIEW_LIMIT) {
+  if (!text) return { text: "", truncated: false };
+  if (text.length <= limit) return { text, truncated: false };
+  let cut = text.slice(0, limit);
+  const lastSpace = cut.lastIndexOf(" ");
+  if (lastSpace > limit * 0.6) cut = cut.slice(0, lastSpace);
+  return { text: cut.replace(/[\s,.;:!?\-–—]+$/, "") + "…", truncated: true };
+}
+
 function ReviewModal({ item, onClose }) {
   const tones = { sienna: "sienna", pine: "pine", rose: "rose", ink: "ink", cool: "cool" };
   if (!item) return null;
   const showReadMore = item.medium !== "music";
+  const clamped = clampReview(item.review);
   return (
     <div onClick={onClose} style={{ position: "fixed", inset: 0, zIndex: 100, background: "rgba(20,18,15,0.62)",
-      display: "flex", alignItems: "center", justifyContent: "center", padding: 24, backdropFilter: "blur(2px)" }}>
+      display: "flex", alignItems: "center", justifyContent: "center", padding: 24, overscrollBehavior: "contain", backdropFilter: "blur(2px)" }}>
       <div onClick={e => e.stopPropagation()} style={{ background: "var(--paper-bright)", width: "min(720px, 96vw)",
+        maxHeight: "calc(100dvh - 48px)", overflow: "hidden",
         display: "grid", gridTemplateColumns: "minmax(0,0.8fr) minmax(0,1fr)", boxShadow: "0 30px 80px rgba(20,18,15,0.4)" }}>
-        <div style={{ minHeight: 320 }}><Plate ratio="3/4" tone={tones[item.tone]} frame={`${item.mlabel} · ${item.year}`} style={{ height: "100%", borderRadius: 0 }} /></div>
-        <div style={{ padding: "30px 32px", position: "relative", display: "flex", flexDirection: "column" }}>
+        <div style={{ minHeight: 320, position: "relative", overflow: "hidden", background: "var(--earth-espresso)" }}>
+          {item.poster
+            ? <>
+                <img src={item.poster} alt={item.title} loading="lazy" decoding="async"
+                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
+                <span className="grain-field" />
+              </>
+            : <Plate ratio="3/4" tone={tones[item.tone]} frame={`${item.mlabel} · ${item.year}`} style={{ height: "100%", borderRadius: 0 }} />}
+        </div>
+        <div style={{ padding: "30px 32px", position: "relative", display: "flex", flexDirection: "column", minHeight: 0 }}>
           <button onClick={onClose} style={{ position: "absolute", top: 16, right: 18, background: "none", border: "none",
             fontFamily: "var(--font-micro)", fontSize: 16, color: "var(--ink-3)", lineHeight: 1 }}>×</button>
           <Micro size={9} color="var(--vermilion)" style={{ fontWeight: 700 }}>Review · {item.mlabel}</Micro>
           <div style={{ fontFamily: "var(--font-annotation)", fontSize: 38, color: "var(--vermilion)", lineHeight: 0.95, margin: "10px 0 6px" }}>{item.reviewTitle}</div>
-          <Micro size={9} color="var(--ink-3)">{item.by} · {item.year} · {item.date}</Micro>
+          <Micro size={9} color="var(--ink-3)">{[item.by, item.year, item.date].filter(Boolean).join(" · ")}</Micro>
           <div style={{ margin: "14px 0 18px" }}>
             {item.rating === "repeat"
               ? <span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}><Equalizer h={15} /><Micro size={9} color="var(--vermilion)">on repeat</Micro></span>
-              : <Stars value={item.rating} />}
+              : item.rating != null ? <Stars value={item.rating} /> : <Micro size={9} color="var(--ink-4)">Logged · {item.date}</Micro>}
           </div>
-          <p style={{ fontFamily: "var(--font-body)", fontSize: 15, lineHeight: 1.55, color: "var(--ink-2)", marginBottom: 24 }}>{item.review}</p>
+          {item.review
+            ? <p style={{ fontFamily: "var(--font-body)", fontSize: 15, lineHeight: 1.55, color: "var(--ink-2)", marginBottom: clamped.truncated ? 12 : 24 }}>
+                {clamped.text}{clamped.truncated && <span style={{ color: "var(--ink-4)", fontStyle: "italic" }}> continued on Letterboxd</span>}
+              </p>
+            : <p style={{ fontFamily: "var(--font-body)", fontStyle: "italic", fontSize: 14, lineHeight: 1.55, color: "var(--ink-3)", marginBottom: 24 }}>Logged without a written note.</p>}
           {showReadMore && (
             <div style={{ marginTop: "auto", borderTop: "1px solid var(--rule)", paddingTop: 14 }}>
               <a href={"https://" + item.lb} target="_blank" rel="noreferrer" style={{ textDecoration: "none" }}>
-                <ArrowLink dir="↗">Read more on Letterboxd</ArrowLink></a>
+                <ArrowLink dir="↗">{clamped.truncated ? "Read the full review on Letterboxd" : "Read more on Letterboxd"}</ArrowLink></a>
             </div>
           )}
         </div>
@@ -179,6 +212,24 @@ function PhotoGrid() {
 
 function Archive({ onGallery }) {
   const [sel, setSel] = React.useState(null);
+  // Live data: Letterboxd reviews + posters, generated by backend/ into data/letterboxd.json.
+  // Falls back to the built-in ARCHIVE_ITEMS on any failure so the reel is never empty.
+  const [items, setItems] = React.useState(ARCHIVE_ITEMS);
+  React.useEffect(() => {
+    let alive = true;
+    fetch("data/letterboxd.json")
+      .then(r => (r.ok ? r.json() : Promise.reject(r.status)))
+      .then(d => { if (alive && d && Array.isArray(d.items) && d.items.length) setItems(d.items); })
+      .catch(() => {});
+    return () => { alive = false; };
+  }, []);
+  // Lock the page behind the review modal so scrolling stays inside it.
+  React.useEffect(() => {
+    if (!sel) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = prev; };
+  }, [sel]);
   return (
     <section id="archive" style={{ background: "var(--paper-news)", padding: SECTION_PAD }}>
       <ChapterOpener num="03" title="Archive" standfirst="Everything I've been watching, reading, hearing and photographing — an evolving log of the non-suffering stuff." />
@@ -190,7 +241,7 @@ function Archive({ onGallery }) {
             <Micro size={9} color="var(--ink-4)">drag / scroll →</Micro>
           </div>
           <div className="reel" style={{ display: "flex", gap: 16, overflowX: "auto", paddingBottom: 14, scrollSnapType: "x mandatory", marginBottom: 56 }}>
-            {ARCHIVE_ITEMS.map(it => <ReviewIsland key={it.id} item={it} onOpen={setSel} />)}
+            {items.map(it => <ReviewIsland key={it.id} item={it} onOpen={setSel} />)}
           </div>
           <div style={{ marginBottom: 18 }}><Micro size={10} color="var(--ink-3)">Photographs — 35mm, grain kept</Micro></div>
           <PhotoGrid />
