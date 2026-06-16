@@ -1,10 +1,29 @@
 {
   "source": "letterboxd",
   "user": "mulla759",
-  "generatedAt": "2026-06-15T13:50:18.220Z",
+  "generatedAt": "2026-06-16T12:48:33.977Z",
   "posterSource": "letterboxd",
   "count": 12,
   "items": [
+    {
+      "id": "letterboxd-review-1357172979",
+      "medium": "film",
+      "mlabel": "Film",
+      "title": "Who Killed Captain Alex?",
+      "year": "2010",
+      "rating": 5,
+      "rewatch": false,
+      "date": "15 Jun",
+      "watchedDate": "2026-06-15",
+      "reviewTitle": "Who Killed Captain Alex?",
+      "review": "Uganda’s finest flick Omds this literally is cinema just vibes and passion 🥹🧡",
+      "lb": "letterboxd.com/mulla759/film/who-killed-captain-alex/",
+      "by": "Nabwana IGG",
+      "tmdbId": "316776",
+      "tone": "sienna",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/2/4/3/6/0/5/243605-who-killed-captain-alex--0-600-0-900-crop.jpg?v=5011bd5350",
+      "posterSource": "letterboxd"
+    },
     {
       "id": "letterboxd-review-1341511829",
       "medium": "film",
@@ -20,7 +39,7 @@
       "lb": "letterboxd.com/mulla759/film/tuner/",
       "by": "Daniel Roher",
       "tmdbId": "1340206",
-      "tone": "sienna",
+      "tone": "pine",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/3/4/8/7/8/1234878-tuner-0-600-0-900-crop.jpg?v=075156069b",
       "posterSource": "letterboxd"
     },
@@ -39,7 +58,7 @@
       "lb": "letterboxd.com/mulla759/film/backrooms-2026/1/",
       "by": "Kane Parsons",
       "tmdbId": "1083381",
-      "tone": "pine",
+      "tone": "rose",
       "poster": "https://a.ltrbxd.com/resized/film-poster/9/7/6/4/1/9/976419-backrooms-2026-0-600-0-900-crop.jpg?v=f7a99e3fc8",
       "posterSource": "letterboxd"
     },
@@ -58,7 +77,7 @@
       "lb": "letterboxd.com/mulla759/film/backrooms-2026/",
       "by": "Kane Parsons",
       "tmdbId": "1083381",
-      "tone": "rose",
+      "tone": "ink",
       "poster": "https://a.ltrbxd.com/resized/film-poster/9/7/6/4/1/9/976419-backrooms-2026-0-600-0-900-crop.jpg?v=f7a99e3fc8",
       "posterSource": "letterboxd"
     },
@@ -77,7 +96,7 @@
       "lb": "letterboxd.com/mulla759/film/star-wars-the-mandalorian-and-grogu/",
       "by": "Jon Favreau",
       "tmdbId": "1228710",
-      "tone": "ink",
+      "tone": "cool",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/1/1/0/7/3/1111073-star-wars-the-mandalorian-and-grogu-0-600-0-900-crop.jpg?v=5da24e2cba",
       "posterSource": "letterboxd"
     },
@@ -92,11 +111,11 @@
       "date": "23 May",
       "watchedDate": "2026-05-23",
       "reviewTitle": "Che: Part One",
-      "review": "Sidenote:,his review is super super shallow and superficial. I want to see part two and condense everything into one review, but I just wanted to still speak on Benicio's character and portraying Che so well. This was really amazing, Highkey I think this might be one of those biopics that is up there for me depending on pt2. I've loved Benicio del Toro's work in OBAA and to see him having his mc moment in CHE. It's really impressive to see him portray and emulate Che, one of the most enigmatic historical icons, in such a profound way. I paused the movie during the UN delegation scene and rewatched the real events on YouTube that Che gave. It wasn't exactly one-to-one, but the way Benicio steps into the character's shoes and emulates him shows the range he has. I remember watching OBAA; I didn't know the context of his character, and now, seeing his other work in CHE Part 1, you truly see why he was amazing. Shoutout to PTA for casting him in OBAA. Ironically, this film centers around CHE, and I've seen some reviews critiquing how the cinematography and atmosphere shift from Part 1 to Part 2. I'm really excited to see Part 2, but what a film, what a quote. \"Patria o Muerte\" , SHIVERS warra watch.",
+      "review": "Sidenote: this review is super super shallow and superficial. I want to see part two and condense everything into one review, but I just wanted to still speak on Benicio's character and portraying Che so well. This was really amazing, Highkey I think this might be one of those biopics that is up there for me depending on pt2. I've loved Benicio del Toro's work in OBAA and to see him having his mc moment in CHE. It's really impressive to see him portray and emulate Che, one of the most enigmatic historical icons, in such a profound way. I paused the movie during the UN delegation scene and rewatched the real events on YouTube that Che gave. It wasn't exactly one-to-one, but the way Benicio steps into the character's shoes and emulates him shows the range he has. I remember watching OBAA; I didn't know the context of his character, and now, seeing his other work in CHE Part 1, you truly see why he was amazing. Shoutout to PTA for casting him in OBAA. Ironically, this film centers around CHE, and I've seen some reviews critiquing how the cinematography and atmosphere shift from Part 1 to Part 2. I'm really excited to see Part 2, but what a film, what a quote. \"Patria o Muerte\" , SHIVERS warra watch.",
       "lb": "letterboxd.com/mulla759/film/che-part-one/",
       "by": "Steven Soderbergh",
       "tmdbId": "8881",
-      "tone": "cool",
+      "tone": "sienna",
       "poster": "https://a.ltrbxd.com/resized/sm/upload/8i/xg/l1/nz/uhUGBtg7GwHQfm6ITdNZms4fTZI-0-600-0-900-crop.jpg?v=365f40fc04",
       "posterSource": "letterboxd"
     },
@@ -115,7 +134,7 @@
       "lb": "letterboxd.com/mulla759/film/the-drama/",
       "by": "Kristoffer Borgli",
       "tmdbId": "1325734",
-      "tone": "sienna",
+      "tone": "pine",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/0/5/4/9/4/1205494-the-drama-0-600-0-900-crop.jpg?v=2320acafd5",
       "posterSource": "letterboxd"
     },
@@ -134,7 +153,7 @@
       "lb": "letterboxd.com/mulla759/film/obsession-2025/",
       "by": "Curry Barker",
       "tmdbId": "1339713",
-      "tone": "pine",
+      "tone": "rose",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/3/4/4/7/2/1234472-obsession-2025-2-0-600-0-900-crop.jpg?v=cff6fc00b6",
       "posterSource": "letterboxd"
     },
@@ -153,7 +172,7 @@
       "lb": "letterboxd.com/mulla759/film/michael-2026/",
       "by": "Antoine Fuqua",
       "tmdbId": "936075",
-      "tone": "rose",
+      "tone": "ink",
       "poster": "https://a.ltrbxd.com/resized/film-poster/8/4/1/1/0/3/841103-michael-2026-0-600-0-900-crop.jpg?v=1e8e478e40",
       "posterSource": "letterboxd"
     },
@@ -172,7 +191,7 @@
       "lb": "letterboxd.com/mulla759/film/my-fathers-shadow-2025/",
       "by": "Akinola Davies Jr.",
       "tmdbId": "1432605",
-      "tone": "ink",
+      "tone": "cool",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/3/1/1/2/5/1/1311251-my-fathers-shadow-2025-0-600-0-900-crop.jpg?v=8a0d4c5e7a",
       "posterSource": "letterboxd"
     },
@@ -191,7 +210,7 @@
       "lb": "letterboxd.com/mulla759/film/project-hail-mary/1/",
       "by": "Phil Lord, Christopher Miller",
       "tmdbId": "687163",
-      "tone": "cool",
+      "tone": "sienna",
       "poster": "https://a.ltrbxd.com/resized/film-poster/6/1/1/2/8/8/611288-project-hail-mary-0-600-0-900-crop.jpg?v=ac31b6ec03",
       "posterSource": "letterboxd"
     },
@@ -210,27 +229,8 @@
       "lb": "letterboxd.com/mulla759/film/project-hail-mary/",
       "by": "Phil Lord, Christopher Miller",
       "tmdbId": "687163",
-      "tone": "sienna",
-      "poster": "https://a.ltrbxd.com/resized/film-poster/6/1/1/2/8/8/611288-project-hail-mary-0-600-0-900-crop.jpg?v=ac31b6ec03",
-      "posterSource": "letterboxd"
-    },
-    {
-      "id": "letterboxd-review-1249488917",
-      "medium": "film",
-      "mlabel": "Film",
-      "title": "The Secret Life of Walter Mitty",
-      "year": "2013",
-      "rating": 5,
-      "rewatch": false,
-      "date": "18 Mar",
-      "watchedDate": "2026-03-18",
-      "reviewTitle": "The Secret Life of Walter Mitty",
-      "review": "I was so touched by this movie that I watched it on the plane heading to the DMV area. It really stirred something inside me, and now I’m feeling a strong urge to explore the world.",
-      "lb": "letterboxd.com/mulla759/film/the-secret-life-of-walter-mitty-2013/",
-      "by": "Ben Stiller",
-      "tmdbId": "116745",
       "tone": "pine",
-      "poster": "https://a.ltrbxd.com/resized/film-poster/9/2/6/1/9/92619-the-secret-life-of-walter-mitty-0-600-0-900-crop.jpg?v=990770ac1c",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/6/1/1/2/8/8/611288-project-hail-mary-0-600-0-900-crop.jpg?v=ac31b6ec03",
       "posterSource": "letterboxd"
     }
   ]
