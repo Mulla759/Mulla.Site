@@ -1,10 +1,29 @@
 {
   "source": "letterboxd",
   "user": "mulla759",
-  "generatedAt": "2026-07-16T10:02:06.972Z",
+  "generatedAt": "2026-07-17T09:51:30.803Z",
   "posterSource": "letterboxd",
   "count": 12,
   "items": [
+    {
+      "id": "letterboxd-review-1399425587",
+      "medium": "film",
+      "mlabel": "Film",
+      "title": "The Odyssey",
+      "year": "2026",
+      "rating": 5,
+      "rewatch": false,
+      "date": "16 Jul",
+      "watchedDate": "2026-07-16",
+      "reviewTitle": "The Odyssey",
+      "review": "Perhaps Nolan’s best film Seeing this on a random Thursday on 70mm",
+      "lb": "letterboxd.com/mulla759/film/the-odyssey-2026/",
+      "by": "Christopher Nolan",
+      "tmdbId": "1368337",
+      "tone": "sienna",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/5/5/3/9/4/1255394-the-odyssey-2026-0-600-0-900-crop.jpg?v=1eed046d0c",
+      "posterSource": "letterboxd"
+    },
     {
       "id": "letterboxd-watch-1396859782",
       "medium": "film",
@@ -20,7 +39,7 @@
       "lb": "letterboxd.com/mulla759/film/lawrence-of-arabia/2/",
       "by": "David Lean",
       "tmdbId": "947",
-      "tone": "sienna",
+      "tone": "pine",
       "poster": "https://a.ltrbxd.com/resized/film-poster/6/0/2/9/9/60299-lawrence-of-arabia-0-600-0-900-crop.jpg?v=a3c56f9487",
       "posterSource": "letterboxd"
     },
@@ -39,7 +58,7 @@
       "lb": "letterboxd.com/mulla759/film/the-invite-2026/",
       "by": "Olivia Wilde",
       "tmdbId": "950028",
-      "tone": "pine",
+      "tone": "rose",
       "poster": "https://a.ltrbxd.com/resized/film-poster/8/5/4/8/3/1/854831-the-invite-2026-0-600-0-900-crop.jpg?v=ee72905e48",
       "posterSource": "letterboxd"
     },
@@ -58,7 +77,7 @@
       "lb": "letterboxd.com/mulla759/film/supergirl-2026/",
       "by": "Craig Gillespie",
       "tmdbId": "1081003",
-      "tone": "rose",
+      "tone": "ink",
       "poster": "https://a.ltrbxd.com/resized/film-poster/9/7/4/2/8/6/974286-supergirl-2026-0-600-0-900-crop.jpg?v=e85ddf39db",
       "posterSource": "letterboxd"
     },
@@ -77,7 +96,7 @@
       "lb": "letterboxd.com/mulla759/film/a-tribe-called-love/",
       "by": "Mohamed Ahmed",
       "tmdbId": "1596168",
-      "tone": "ink",
+      "tone": "cool",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/4/6/4/8/0/1/1464801-a-tribe-called-love-0-600-0-900-crop.jpg?v=15a3895484",
       "posterSource": "letterboxd"
     },
@@ -96,7 +115,7 @@
       "lb": "letterboxd.com/mulla759/film/disclosure-day/",
       "by": "Steven Spielberg",
       "tmdbId": "1275779",
-      "tone": "cool",
+      "tone": "sienna",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/5/9/2/5/1/1159251-disclosure-day-0-600-0-900-crop.jpg?v=9ae810e4bb",
       "posterSource": "letterboxd"
     },
@@ -115,7 +134,7 @@
       "lb": "letterboxd.com/mulla759/film/who-killed-captain-alex/",
       "by": "Nabwana IGG",
       "tmdbId": "316776",
-      "tone": "sienna",
+      "tone": "pine",
       "poster": "https://a.ltrbxd.com/resized/film-poster/2/4/3/6/0/5/243605-who-killed-captain-alex--0-600-0-900-crop.jpg?v=5011bd5350",
       "posterSource": "letterboxd"
     },
@@ -134,7 +153,7 @@
       "lb": "letterboxd.com/mulla759/film/tuner/",
       "by": "Daniel Roher",
       "tmdbId": "1340206",
-      "tone": "pine",
+      "tone": "rose",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/3/4/8/7/8/1234878-tuner-0-600-0-900-crop.jpg?v=075156069b",
       "posterSource": "letterboxd"
     },
@@ -153,7 +172,7 @@
       "lb": "letterboxd.com/mulla759/film/backrooms-2026/1/",
       "by": "Kane Parsons",
       "tmdbId": "1083381",
-      "tone": "rose",
+      "tone": "ink",
       "poster": "https://a.ltrbxd.com/resized/film-poster/9/7/6/4/1/9/976419-backrooms-2026-0-600-0-900-crop.jpg?v=f7a99e3fc8",
       "posterSource": "letterboxd"
     },
@@ -172,7 +191,7 @@
       "lb": "letterboxd.com/mulla759/film/backrooms-2026/",
       "by": "Kane Parsons",
       "tmdbId": "1083381",
-      "tone": "ink",
+      "tone": "cool",
       "poster": "https://a.ltrbxd.com/resized/film-poster/9/7/6/4/1/9/976419-backrooms-2026-0-600-0-900-crop.jpg?v=f7a99e3fc8",
       "posterSource": "letterboxd"
     },
@@ -191,7 +210,7 @@
       "lb": "letterboxd.com/mulla759/film/the-mandalorian-and-grogu/",
       "by": "Jon Favreau",
       "tmdbId": "1228710",
-      "tone": "cool",
+      "tone": "sienna",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/1/1/0/7/3/1111073-star-wars-the-mandalorian-and-grogu-0-600-0-900-crop.jpg?v=5da24e2cba",
       "posterSource": "letterboxd"
     },
@@ -210,27 +229,8 @@
       "lb": "letterboxd.com/mulla759/film/che-part-one/",
       "by": "Steven Soderbergh",
       "tmdbId": "8881",
-      "tone": "sienna",
-      "poster": "https://a.ltrbxd.com/resized/sm/upload/8i/xg/l1/nz/uhUGBtg7GwHQfm6ITdNZms4fTZI-0-600-0-900-crop.jpg?v=365f40fc04",
-      "posterSource": "letterboxd"
-    },
-    {
-      "id": "letterboxd-review-1325990181",
-      "medium": "film",
-      "mlabel": "Film",
-      "title": "The Drama",
-      "year": "2026",
-      "rating": 4.5,
-      "rewatch": false,
-      "date": "23 May",
-      "watchedDate": "2026-05-23",
-      "reviewTitle": "The Drama",
-      "review": "Update: didn't feel rating this same as Obsession 4 -> 4.5 I need a walk after watching this (ᵕ–﹏–)🌡️ Loved the really cool intricate details that I related with Emma character, I'm in deaf in my right ear also and get those random moments where people think I'm ignoring them, or I have trouble hearing them 😭😭 I initially came in blind, I was expecting a lot but got more ngl. I love how the movie danced around the idea of intimacy how it's really really personal *and unique to each couple despite how unusual it seemed & shouldn't be shared with friends or especially with acquaintances.(HOT_TAKE: Rachel is walking red flag for not keeping her vow with her mans) But it seemed Charlie really and dearly loved Emma and so did Emma, Even that speech he worked on in the beginning it was really beautiful was so real and vulnerable, it's quite sad a granular conflict between his friends and fiancée shaped how he saw her, but to me it’s also quite ironic, but it's funny this conflict was Charlie's worst thing he has ever done, and shockingly it was to Emma. Long story short Emma's ability to recognized that and letting him have do-over was beautiful (Charlie is still a bot IMO) I think this is Roberts's & Zendaya's best work, I went in blind and still felt shocked how much chemistry they had. The second-hand embrassement, the small disagreements, the puns good stuff!! Wish I have seen this in theaters",
-      "lb": "letterboxd.com/mulla759/film/the-drama/",
-      "by": "Kristoffer Borgli",
-      "tmdbId": "1325734",
       "tone": "pine",
-      "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/0/5/4/9/4/1205494-the-drama-0-600-0-900-crop.jpg?v=2320acafd5",
+      "poster": "https://a.ltrbxd.com/resized/sm/upload/8i/xg/l1/nz/uhUGBtg7GwHQfm6ITdNZms4fTZI-0-600-0-900-crop.jpg?v=365f40fc04",
       "posterSource": "letterboxd"
     }
   ]
