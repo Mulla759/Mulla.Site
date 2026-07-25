@@ -1,10 +1,29 @@
 {
   "source": "letterboxd",
   "user": "mulla759",
-  "generatedAt": "2026-07-24T10:11:22.536Z",
+  "generatedAt": "2026-07-25T09:41:43.118Z",
   "posterSource": "letterboxd",
   "count": 12,
   "items": [
+    {
+      "id": "letterboxd-review-1413046001",
+      "medium": "film",
+      "mlabel": "Film",
+      "title": "Fight Club",
+      "year": "1999",
+      "rating": 4.5,
+      "rewatch": true,
+      "date": "24 Jul",
+      "watchedDate": "2026-07-24",
+      "reviewTitle": "Fight Club",
+      "review": "Annual rewatch Seeing this on the big screen just wowww 🤩",
+      "lb": "letterboxd.com/mulla759/film/fight-club/2/",
+      "by": "David Fincher",
+      "tmdbId": "550",
+      "tone": "sienna",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/5/1/5/6/8/51568-fight-club-0-600-0-900-crop.jpg?v=768b32dfa4",
+      "posterSource": "letterboxd"
+    },
     {
       "id": "letterboxd-review-1399425587",
       "medium": "film",
@@ -20,7 +39,7 @@
       "lb": "letterboxd.com/mulla759/film/the-odyssey-2026/",
       "by": "Christopher Nolan",
       "tmdbId": "1368337",
-      "tone": "sienna",
+      "tone": "pine",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/5/5/3/9/4/1255394-the-odyssey-2026-0-600-0-900-crop.jpg?v=1eed046d0c",
       "posterSource": "letterboxd"
     },
@@ -39,7 +58,7 @@
       "lb": "letterboxd.com/mulla759/film/lawrence-of-arabia/2/",
       "by": "David Lean",
       "tmdbId": "947",
-      "tone": "pine",
+      "tone": "rose",
       "poster": "https://a.ltrbxd.com/resized/film-poster/6/0/2/9/9/60299-lawrence-of-arabia-0-600-0-900-crop.jpg?v=a3c56f9487",
       "posterSource": "letterboxd"
     },
@@ -58,7 +77,7 @@
       "lb": "letterboxd.com/mulla759/film/the-invite-2026/",
       "by": "Olivia Wilde",
       "tmdbId": "950028",
-      "tone": "rose",
+      "tone": "ink",
       "poster": "https://a.ltrbxd.com/resized/film-poster/8/5/4/8/3/1/854831-the-invite-2026-0-600-0-900-crop.jpg?v=ee72905e48",
       "posterSource": "letterboxd"
     },
@@ -77,7 +96,7 @@
       "lb": "letterboxd.com/mulla759/film/supergirl-2026/",
       "by": "Craig Gillespie",
       "tmdbId": "1081003",
-      "tone": "ink",
+      "tone": "cool",
       "poster": "https://a.ltrbxd.com/resized/film-poster/9/7/4/2/8/6/974286-supergirl-2026-0-600-0-900-crop.jpg?v=e85ddf39db",
       "posterSource": "letterboxd"
     },
@@ -96,7 +115,7 @@
       "lb": "letterboxd.com/mulla759/film/a-tribe-called-love/",
       "by": "Mohamed Ahmed",
       "tmdbId": "1596168",
-      "tone": "cool",
+      "tone": "sienna",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/4/6/4/8/0/1/1464801-a-tribe-called-love-0-600-0-900-crop.jpg?v=15a3895484",
       "posterSource": "letterboxd"
     },
@@ -115,7 +134,7 @@
       "lb": "letterboxd.com/mulla759/film/disclosure-day/",
       "by": "Steven Spielberg",
       "tmdbId": "1275779",
-      "tone": "sienna",
+      "tone": "pine",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/5/9/2/5/1/1159251-disclosure-day-0-600-0-900-crop.jpg?v=9ae810e4bb",
       "posterSource": "letterboxd"
     },
@@ -134,7 +153,7 @@
       "lb": "letterboxd.com/mulla759/film/who-killed-captain-alex/",
       "by": "Nabwana IGG",
       "tmdbId": "316776",
-      "tone": "pine",
+      "tone": "rose",
       "poster": "https://a.ltrbxd.com/resized/film-poster/2/4/3/6/0/5/243605-who-killed-captain-alex--0-600-0-900-crop.jpg?v=5011bd5350",
       "posterSource": "letterboxd"
     },
@@ -153,7 +172,7 @@
       "lb": "letterboxd.com/mulla759/film/tuner/",
       "by": "Daniel Roher",
       "tmdbId": "1340206",
-      "tone": "rose",
+      "tone": "ink",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/3/4/8/7/8/1234878-tuner-0-600-0-900-crop.jpg?v=075156069b",
       "posterSource": "letterboxd"
     },
@@ -172,7 +191,7 @@
       "lb": "letterboxd.com/mulla759/film/backrooms-2026/1/",
       "by": "Kane Parsons",
       "tmdbId": "1083381",
-      "tone": "ink",
+      "tone": "cool",
       "poster": "https://a.ltrbxd.com/resized/film-poster/9/7/6/4/1/9/976419-backrooms-2026-0-600-0-900-crop.jpg?v=f7a99e3fc8",
       "posterSource": "letterboxd"
     },
@@ -191,7 +210,7 @@
       "lb": "letterboxd.com/mulla759/film/backrooms-2026/",
       "by": "Kane Parsons",
       "tmdbId": "1083381",
-      "tone": "cool",
+      "tone": "sienna",
       "poster": "https://a.ltrbxd.com/resized/film-poster/9/7/6/4/1/9/976419-backrooms-2026-0-600-0-900-crop.jpg?v=f7a99e3fc8",
       "posterSource": "letterboxd"
     },
@@ -210,27 +229,8 @@
       "lb": "letterboxd.com/mulla759/film/the-mandalorian-and-grogu/",
       "by": "Jon Favreau",
       "tmdbId": "1228710",
-      "tone": "sienna",
-      "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/1/1/0/7/3/1111073-star-wars-the-mandalorian-and-grogu-0-600-0-900-crop.jpg?v=5da24e2cba",
-      "posterSource": "letterboxd"
-    },
-    {
-      "id": "letterboxd-review-1327099538",
-      "medium": "film",
-      "mlabel": "Film",
-      "title": "Che: Part One",
-      "year": "2008",
-      "rating": 4.5,
-      "rewatch": false,
-      "date": "23 May",
-      "watchedDate": "2026-05-23",
-      "reviewTitle": "Che: Part One",
-      "review": "Sidenote: this review is super super shallow and superficial. I want to see part two and condense everything into one review, but I just wanted to still speak on Benicio's character and portraying Che so well. This was really amazing, Highkey I think this might be one of those biopics that is up there for me depending on pt2. I've loved Benicio del Toro's work in OBAA and to see him having his mc moment in CHE. It's really impressive to see him portray and emulate Che, one of the most enigmatic historical icons, in such a profound way. I paused the movie during the UN delegation scene and rewatched the real events on YouTube that Che gave. It wasn't exactly one-to-one, but the way Benicio steps into the character's shoes and emulates him shows the range he has. I remember watching OBAA; I didn't know the context of his character, and now, seeing his other work in CHE Part 1, you truly see why he was amazing. Shoutout to PTA for casting him in OBAA. Ironically, this film centers around CHE, and I've seen some reviews critiquing how the cinematography and atmosphere shift from Part 1 to Part 2. I'm really excited to see Part 2, but what a film, what a quote. \"Patria o Muerte\" , SHIVERS warra watch.",
-      "lb": "letterboxd.com/mulla759/film/che-part-one/",
-      "by": "Steven Soderbergh",
-      "tmdbId": "8881",
       "tone": "pine",
-      "poster": "https://a.ltrbxd.com/resized/sm/upload/8i/xg/l1/nz/uhUGBtg7GwHQfm6ITdNZms4fTZI-0-600-0-900-crop.jpg?v=365f40fc04",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/1/1/0/7/3/1111073-star-wars-the-mandalorian-and-grogu-0-600-0-900-crop.jpg?v=5da24e2cba",
       "posterSource": "letterboxd"
     }
   ]
