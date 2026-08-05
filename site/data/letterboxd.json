@@ -1,10 +1,29 @@
 {
   "source": "letterboxd",
   "user": "mulla759",
-  "generatedAt": "2026-08-04T10:31:00.886Z",
+  "generatedAt": "2026-08-05T10:28:43.873Z",
   "posterSource": "letterboxd",
   "count": 12,
   "items": [
+    {
+      "id": "letterboxd-review-1433940813",
+      "medium": "film",
+      "mlabel": "Film",
+      "title": "Che: Part Two",
+      "year": "2008",
+      "rating": 4.5,
+      "rewatch": false,
+      "date": "4 Aug",
+      "watchedDate": "2026-08-04",
+      "reviewTitle": "Che: Part Two",
+      "review": "Love the cinematic difference between 1 & 2 “Patria o Muerte”",
+      "lb": "letterboxd.com/mulla759/film/che-part-two/",
+      "by": "Steven Soderbergh",
+      "tmdbId": "8880",
+      "tone": "sienna",
+      "poster": "https://a.ltrbxd.com/resized/sm/upload/ro/pp/41/2a/che-2-0-600-0-900-crop.jpg?v=0d242677d0",
+      "posterSource": "letterboxd"
+    },
     {
       "id": "letterboxd-review-1425152406",
       "medium": "film",
@@ -20,7 +39,7 @@
       "lb": "letterboxd.com/mulla759/film/spider-man-brand-new-day/",
       "by": "Destin Daniel Cretton",
       "tmdbId": "969681",
-      "tone": "sienna",
+      "tone": "pine",
       "poster": "https://a.ltrbxd.com/resized/film-poster/8/7/2/8/7/1/872871-spider-man-brand-new-day-0-600-0-900-crop.jpg?v=ebe6beb4fc",
       "posterSource": "letterboxd"
     },
@@ -39,7 +58,7 @@
       "lb": "letterboxd.com/mulla759/film/fight-club/2/",
       "by": "David Fincher",
       "tmdbId": "550",
-      "tone": "pine",
+      "tone": "rose",
       "poster": "https://a.ltrbxd.com/resized/film-poster/5/1/5/6/8/51568-fight-club-0-600-0-900-crop.jpg?v=768b32dfa4",
       "posterSource": "letterboxd"
     },
@@ -58,7 +77,7 @@
       "lb": "letterboxd.com/mulla759/film/the-odyssey-2026/",
       "by": "Christopher Nolan",
       "tmdbId": "1368337",
-      "tone": "rose",
+      "tone": "ink",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/5/5/3/9/4/1255394-the-odyssey-2026-0-600-0-900-crop.jpg?v=1eed046d0c",
       "posterSource": "letterboxd"
     },
@@ -77,7 +96,7 @@
       "lb": "letterboxd.com/mulla759/film/lawrence-of-arabia/2/",
       "by": "David Lean",
       "tmdbId": "947",
-      "tone": "ink",
+      "tone": "cool",
       "poster": "https://a.ltrbxd.com/resized/film-poster/6/0/2/9/9/60299-lawrence-of-arabia-0-600-0-900-crop.jpg?v=a3c56f9487",
       "posterSource": "letterboxd"
     },
@@ -96,7 +115,7 @@
       "lb": "letterboxd.com/mulla759/film/the-invite-2026/",
       "by": "Olivia Wilde",
       "tmdbId": "950028",
-      "tone": "cool",
+      "tone": "sienna",
       "poster": "https://a.ltrbxd.com/resized/film-poster/8/5/4/8/3/1/854831-the-invite-2026-0-600-0-900-crop.jpg?v=ee72905e48",
       "posterSource": "letterboxd"
     },
@@ -115,7 +134,7 @@
       "lb": "letterboxd.com/mulla759/film/supergirl-2026/",
       "by": "Craig Gillespie",
       "tmdbId": "1081003",
-      "tone": "sienna",
+      "tone": "pine",
       "poster": "https://a.ltrbxd.com/resized/film-poster/9/7/4/2/8/6/974286-supergirl-2026-0-600-0-900-crop.jpg?v=e85ddf39db",
       "posterSource": "letterboxd"
     },
@@ -134,7 +153,7 @@
       "lb": "letterboxd.com/mulla759/film/a-tribe-called-love/",
       "by": "Mohamed Ahmed",
       "tmdbId": "1596168",
-      "tone": "pine",
+      "tone": "rose",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/4/6/4/8/0/1/1464801-a-tribe-called-love-0-600-0-900-crop.jpg?v=15a3895484",
       "posterSource": "letterboxd"
     },
@@ -153,7 +172,7 @@
       "lb": "letterboxd.com/mulla759/film/disclosure-day/",
       "by": "Steven Spielberg",
       "tmdbId": "1275779",
-      "tone": "rose",
+      "tone": "ink",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/5/9/2/5/1/1159251-disclosure-day-0-600-0-900-crop.jpg?v=9ae810e4bb",
       "posterSource": "letterboxd"
     },
@@ -172,7 +191,7 @@
       "lb": "letterboxd.com/mulla759/film/who-killed-captain-alex/",
       "by": "Nabwana IGG",
       "tmdbId": "316776",
-      "tone": "ink",
+      "tone": "cool",
       "poster": "https://a.ltrbxd.com/resized/film-poster/2/4/3/6/0/5/243605-who-killed-captain-alex--0-600-0-900-crop.jpg?v=5011bd5350",
       "posterSource": "letterboxd"
     },
@@ -191,7 +210,7 @@
       "lb": "letterboxd.com/mulla759/film/tuner/",
       "by": "Daniel Roher",
       "tmdbId": "1340206",
-      "tone": "cool",
+      "tone": "sienna",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/3/4/8/7/8/1234878-tuner-0-600-0-900-crop.jpg?v=075156069b",
       "posterSource": "letterboxd"
     },
@@ -208,25 +227,6 @@
       "reviewTitle": "Backrooms",
       "review": "First time was so nice I had to go twice!!!",
       "lb": "letterboxd.com/mulla759/film/backrooms-2026/1/",
-      "by": "Kane Parsons",
-      "tmdbId": "1083381",
-      "tone": "sienna",
-      "poster": "https://a.ltrbxd.com/resized/film-poster/9/7/6/4/1/9/976419-backrooms-2026-0-600-0-900-crop.jpg?v=f7a99e3fc8",
-      "posterSource": "letterboxd"
-    },
-    {
-      "id": "letterboxd-review-1333143823",
-      "medium": "film",
-      "mlabel": "Film",
-      "title": "Backrooms",
-      "year": "2026",
-      "rating": 4.5,
-      "rewatch": false,
-      "date": "28 May",
-      "watchedDate": "2026-05-28",
-      "reviewTitle": "Backrooms",
-      "review": "\"It's every place that ever was.\" WE NEED MORE GEN-Z directors genuinely!! the camera work and the score and 1-1 adaption phenomenal!!! 1. I really love the analog horror, the cinematography, and also the color palette. No one truly understands how beautiful the camerawork in this movie was it felt alive and as viewer it felt so dreadful. I felt a part of the sequence literally the insect was one of those cool shots that gave me that joy. The next cool shot I would say was when it pans over and zooms into the liminal spaces, and you feel the existential dread. One thing that's really cool about this film that I said earlier is that the place has so much familiarity, and the score and the SFX are very, very close to home. When I mean that, it's like if you worked in a shitty office ever in your life, you know that experience where the light is flickering or even the humming of lights. It's one of those things that are a nuisance, but it's turned into horror element, which is so amazing. These Gen Z directors, even seeing the series turn into a movie, SPECTACULAR GIVE ME 14 of them . Love it. I would have given it a five if I didn't miss the five-minute sequence in the beginning, but I must rewatch this to give my full honest confident take and also understand most of motifs I’ve missed or too afraid to notice 😭😭. Honestly, I think this is Jaws moment for our generation. I'm certain people are going to be more afraid of liminal spaces, long hallways, or anything yellowstained 😭😭. just wow, just what a film, what a film. I can't wait to rewatch it again, hopefully. 🫣",
-      "lb": "letterboxd.com/mulla759/film/backrooms-2026/",
       "by": "Kane Parsons",
       "tmdbId": "1083381",
       "tone": "pine",
