@@ -1,10 +1,29 @@
 {
   "source": "letterboxd",
   "user": "mulla759",
-  "generatedAt": "2026-08-16T08:20:57.152Z",
+  "generatedAt": "2026-08-17T08:35:34.600Z",
   "posterSource": "letterboxd",
   "count": 12,
   "items": [
+    {
+      "id": "letterboxd-review-1454740214",
+      "medium": "film",
+      "mlabel": "Film",
+      "title": "La La Land",
+      "year": "2016",
+      "rating": 5,
+      "rewatch": true,
+      "date": "16 Aug",
+      "watchedDate": "2026-08-16",
+      "reviewTitle": "La La Land",
+      "review": "“People love what other people are passionate about” - Mia Seeing this in theaters just completed me!! Watching this movie now at this age makes me relate to Seb & Mia and the emotions in the feeling, desire, and aspiration that most have in their 20s, and what’s worse is the million rejections and emotions that throttle animating aspects of life. The dreams The colors just wow. I don’t think seeing this at home or anywhere else besides the theatres does it justice. Also, the nostalgic feeling omg the Prius, the 2016 elements, the palm trees, and the atmosphere - it’s like a small snapshot of my childhood perception of LA. It’s heartbreaking to say the least. it doesn’t exist anymore with Palisades Fire and the pandemic and many socioeconomic things. it kinda brings you back to that city of stars portrayed is a dreamy place that no longer exists just like in the movies. 🙁💔 I don’t wanna be like Seb and cling to that restorative nostalgia, but I would forever cherish the reflective nostalgia this movie brings me every time I see it in the context of my life. 🤍 I think we’re all somewhat Seb and Mia in our little lives. We hang posters, read books, and watch films that remind us of nostalgia. (Unironically, me watching the 10th anniversary of a movie that I somewhat grew old with.) We all cling to it like Mia’s obsession with old Hollywood and Seb’s dream to restore jazz. Each rebellious to the times and dreamer of their own future. Here’s to the ones who dream, Foolish as they may seem. Here’s to the hearts that ache. Here’s to the mess we make. - Mia",
+      "lb": "letterboxd.com/mulla759/film/la-la-land/1/",
+      "by": "Damien Chazelle",
+      "tmdbId": "313369",
+      "tone": "sienna",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/2/4/0/3/4/4/240344-la-la-land-0-600-0-900-crop.jpg?v=053670ff84",
+      "posterSource": "letterboxd"
+    },
     {
       "id": "letterboxd-review-1441437175",
       "medium": "film",
@@ -20,7 +39,7 @@
       "lb": "letterboxd.com/mulla759/film/aloners/",
       "by": "Hong Sung-eun",
       "tmdbId": "805058",
-      "tone": "sienna",
+      "tone": "pine",
       "poster": "https://a.ltrbxd.com/resized/film-poster/7/2/2/3/7/9/722379-aloners-0-600-0-900-crop.jpg?v=4da021aeb0",
       "posterSource": "letterboxd"
     },
@@ -39,7 +58,7 @@
       "lb": "letterboxd.com/mulla759/film/che-part-two/",
       "by": "Steven Soderbergh",
       "tmdbId": "8880",
-      "tone": "pine",
+      "tone": "rose",
       "poster": "https://a.ltrbxd.com/resized/sm/upload/ro/pp/41/2a/che-2-0-600-0-900-crop.jpg?v=0d242677d0",
       "posterSource": "letterboxd"
     },
@@ -58,7 +77,7 @@
       "lb": "letterboxd.com/mulla759/film/spider-man-brand-new-day/",
       "by": "Destin Daniel Cretton",
       "tmdbId": "969681",
-      "tone": "rose",
+      "tone": "ink",
       "poster": "https://a.ltrbxd.com/resized/film-poster/8/7/2/8/7/1/872871-spider-man-brand-new-day-0-600-0-900-crop.jpg?v=ebe6beb4fc",
       "posterSource": "letterboxd"
     },
@@ -77,7 +96,7 @@
       "lb": "letterboxd.com/mulla759/film/fight-club/2/",
       "by": "David Fincher",
       "tmdbId": "550",
-      "tone": "ink",
+      "tone": "cool",
       "poster": "https://a.ltrbxd.com/resized/film-poster/5/1/5/6/8/51568-fight-club-0-600-0-900-crop.jpg?v=768b32dfa4",
       "posterSource": "letterboxd"
     },
@@ -96,7 +115,7 @@
       "lb": "letterboxd.com/mulla759/film/the-odyssey-2026/",
       "by": "Christopher Nolan",
       "tmdbId": "1368337",
-      "tone": "cool",
+      "tone": "sienna",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/5/5/3/9/4/1255394-the-odyssey-2026-0-600-0-900-crop.jpg?v=1eed046d0c",
       "posterSource": "letterboxd"
     },
@@ -115,7 +134,7 @@
       "lb": "letterboxd.com/mulla759/film/lawrence-of-arabia/2/",
       "by": "David Lean",
       "tmdbId": "947",
-      "tone": "sienna",
+      "tone": "pine",
       "poster": "https://a.ltrbxd.com/resized/film-poster/6/0/2/9/9/60299-lawrence-of-arabia-0-600-0-900-crop.jpg?v=a3c56f9487",
       "posterSource": "letterboxd"
     },
@@ -134,7 +153,7 @@
       "lb": "letterboxd.com/mulla759/film/the-invite-2026/",
       "by": "Olivia Wilde",
       "tmdbId": "950028",
-      "tone": "pine",
+      "tone": "rose",
       "poster": "https://a.ltrbxd.com/resized/film-poster/8/5/4/8/3/1/854831-the-invite-2026-0-600-0-900-crop.jpg?v=ee72905e48",
       "posterSource": "letterboxd"
     },
@@ -153,7 +172,7 @@
       "lb": "letterboxd.com/mulla759/film/supergirl-2026/",
       "by": "Craig Gillespie",
       "tmdbId": "1081003",
-      "tone": "rose",
+      "tone": "ink",
       "poster": "https://a.ltrbxd.com/resized/film-poster/9/7/4/2/8/6/974286-supergirl-2026-0-600-0-900-crop.jpg?v=e85ddf39db",
       "posterSource": "letterboxd"
     },
@@ -172,7 +191,7 @@
       "lb": "letterboxd.com/mulla759/film/a-tribe-called-love/",
       "by": "Mohamed Ahmed",
       "tmdbId": "1596168",
-      "tone": "ink",
+      "tone": "cool",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/4/6/4/8/0/1/1464801-a-tribe-called-love-0-600-0-900-crop.jpg?v=15a3895484",
       "posterSource": "letterboxd"
     },
@@ -191,7 +210,7 @@
       "lb": "letterboxd.com/mulla759/film/disclosure-day/",
       "by": "Steven Spielberg",
       "tmdbId": "1275779",
-      "tone": "cool",
+      "tone": "sienna",
       "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/5/9/2/5/1/1159251-disclosure-day-0-600-0-900-crop.jpg?v=9ae810e4bb",
       "posterSource": "letterboxd"
     },
@@ -210,27 +229,8 @@
       "lb": "letterboxd.com/mulla759/film/who-killed-captain-alex/",
       "by": "Nabwana IGG",
       "tmdbId": "316776",
-      "tone": "sienna",
-      "poster": "https://a.ltrbxd.com/resized/film-poster/2/4/3/6/0/5/243605-who-killed-captain-alex--0-600-0-900-crop.jpg?v=5011bd5350",
-      "posterSource": "letterboxd"
-    },
-    {
-      "id": "letterboxd-review-1341511829",
-      "medium": "film",
-      "mlabel": "Film",
-      "title": "Tuner",
-      "year": "2025",
-      "rating": 1.5,
-      "rewatch": false,
-      "date": "3 Jun",
-      "watchedDate": "2026-06-03",
-      "reviewTitle": "Tuner",
-      "review": "Israeli propaganda 😭😭",
-      "lb": "letterboxd.com/mulla759/film/tuner/",
-      "by": "Daniel Roher",
-      "tmdbId": "1340206",
       "tone": "pine",
-      "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/3/4/8/7/8/1234878-tuner-0-600-0-900-crop.jpg?v=075156069b",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/2/4/3/6/0/5/243605-who-killed-captain-alex--0-600-0-900-crop.jpg?v=5011bd5350",
       "posterSource": "letterboxd"
     }
   ]
